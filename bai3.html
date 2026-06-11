@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form đăng ký tham gia câu lạc bộ</title>
+  </head>
+  <body>
+    <h1>ĐĂNG KÝ THAM GIA CÂU LẠC BỘ</h1>
+    <p>
+      Chào mừng bạn đến với trang đăng ký của <strong>CLB Sinh Viên</strong>.
+      Đây là nơi bạn có thể giao lưu, học hỏi và phát triển
+      <span>kỹ năng sống</span>. Hãy điền đầy đủ các thông tin bên dưới để hoàn
+      tất thủ tục.
+      <em>Chúc bạn có những trải nghiệm tuyệt vời cùng chúng tôi!</em>
+    </p>
+
+    <form id="club-form">
+      <h2>Thông tin cá nhân</h2>
+      <label for="fullname" class="required-field">Họ và tên:</label><br />
+      <input type="text" id="fullname" name="fullname" /><br />
+      <label for="email" class="required-field">Email:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <label for="phone" class="required-field">Số điện thoại :</label><br />
+      <input type="tel" id="phone" name="phone" /><br />
+      Giới tính:<br />
+      <input type="radio" id="gender-male" name="gender" value="Nam" />
+      <label for="gender-male">Nam</label>
+      <input type="radio" id="gender-female" name="gender" value="Nữ" />
+      <label for="gender-female">Nữ</label>
+      <br /><br />
+      <h2>Lựa chọn & Sở thích</h2>
+      <label for="club-select" class="required-field">Chọn câu lạc bộ:</label
+      ><br />
+      <select id="club-select" name="club-select">
+        <option value="programming">CLB Lập trình</option>
+        <option value="english">CLB Tiếng Anh</option>
+        <option value="media">CLB Truyền thông</option>
+        <option value="music">CLB Âm nhạc</option>
+      </select>
+      <br /><br />
+      Sở thích:<br />
+      <input type="checkbox" id="reading" name="reading" value="Đọc sách" />
+      <label for="reading">Đọc sách</label><br />
+      <input type="checkbox" id="sports" name="sports" value="Chơi thể thao" />
+      <label for="sports">Chơi thể thao</label><br />
+      <input type="checkbox" id="travel" name="travel" value="Du lịch" />
+      <label for="travel">Du lịch</label><br />
+      <input type="checkbox" id="tech" name="tech" value="Công nghệ" />
+      <label for="tech">Công nghệ</label>
+      <br /><br />
+      <h2>Thông tin thêm</h2>
+      <label for="about-me">Giới thiệu bản thân:</label><br />
+      <textarea id="about-me" name="about-me" rows="5" cols="40"></textarea>
+      <br /><br />
+      <input type="checkbox" id="agreement" name="agreement" />
+      <label for="agreement" class="required-field"
+        >Tôi cam kết các thông tin trên là chính xác.</label
+      >
+      <br /><br />
+      <input type="submit" value="Gửi đăng ký" />
+      <input type="reset" value="Làm lại" />
+    </form>
+  </body>
+</html>
