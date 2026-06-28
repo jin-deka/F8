@@ -1,0 +1,76 @@
+body {
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.hamburger-menu {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 30px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition:
+    background 0.4s,
+    transform 0.1s;
+}
+
+.hamburger-menu:hover,
+.hamburger-menu:active {
+  transform: scale(0.92);
+  background: #e0e0e0;
+}
+
+.bar {
+  position: absolute;
+  left: 15px;
+  width: 40px;
+  height: 4px;
+  background: #333;
+  border-radius: 4px;
+  pointer-events: none;
+  transition:
+    transform 0.3s,
+    top 0.3s 0.3s,
+    opacity 0s 0.3s;
+}
+
+.bar-top {
+  top: 15px;
+}
+.bar-mid {
+  top: 28px;
+}
+.bar-bot {
+  top: 41px;
+}
+
+#menu-toggle:checked ~ .hamburger-menu .bar {
+  transition:
+    top 0.3s,
+    transform 0.3s 0.3s,
+    opacity 0s 0.3s;
+}
+
+#menu-toggle:checked ~ .hamburger-menu .bar-top,
+#menu-toggle:checked ~ .hamburger-menu .bar-bot {
+  top: 28px;
+}
+
+#menu-toggle:checked ~ .hamburger-menu .bar-top {
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .hamburger-menu .bar-bot {
+  transform: rotate(-45deg);
+}
+#menu-toggle:checked ~ .hamburger-menu .bar-mid {
+  opacity: 0;
+}
