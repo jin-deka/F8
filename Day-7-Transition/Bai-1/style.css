@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-.hamburger-menu {
+.btn {
   display: inline-block;
   position: relative;
   width: 40px;
@@ -18,18 +18,15 @@ body {
   border-radius: 8px;
   box-sizing: content-box;
   cursor: pointer;
-  transition:
-    background 0.4s,
-    transform 0.1s;
+  transition: 0.2s;
 }
 
-.hamburger-menu:hover,
-.hamburger-menu:active {
+.btn:active,.btn:hover {
   transform: scale(0.92);
   background: #e0e0e0;
 }
 
-.bar {
+.btn span {
   position: absolute;
   left: 15px;
   width: 40px;
@@ -43,34 +40,30 @@ body {
     opacity 0s 0.3s;
 }
 
-.bar-top {
+.btn span:nth-child(1) {
   top: 15px;
 }
-.bar-mid {
+.btn span:nth-child(2) {
   top: 28px;
 }
-.bar-bot {
+.btn span:nth-child(3) {
   top: 41px;
 }
 
-#menu-toggle:checked ~ .hamburger-menu .bar {
+#m:checked ~ .btn span {
   transition:
     top 0.3s,
     transform 0.3s 0.3s,
     opacity 0s 0.3s;
 }
-
-#menu-toggle:checked ~ .hamburger-menu .bar-top,
-#menu-toggle:checked ~ .hamburger-menu .bar-bot {
+#m:checked ~ .btn span:nth-child(1) {
   top: 28px;
-}
-
-#menu-toggle:checked ~ .hamburger-menu .bar-top {
   transform: rotate(45deg);
 }
-#menu-toggle:checked ~ .hamburger-menu .bar-bot {
-  transform: rotate(-45deg);
-}
-#menu-toggle:checked ~ .hamburger-menu .bar-mid {
+#m:checked ~ .btn span:nth-child(2) {
   opacity: 0;
+}
+#m:checked ~ .btn span:nth-child(3) {
+  top: 28px;
+  transform: rotate(-45deg);
 }
